@@ -1,11 +1,6 @@
-export default function Mesfavoris() {
-    return (
-        <>
-            <div className="mx-auto">
-                This is my favourites;
+const Mesfavoris = () => {
+    return <h1>Mesfavoris</h1>;
+};
 
-            </div>
-        </>
-    )
+export default Mesfavoris;
 
-}

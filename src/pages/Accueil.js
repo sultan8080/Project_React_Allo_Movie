@@ -1,10 +1,5 @@
-export default function Accueil() {
-    return (
-        <>
-            <div className="text-center">
-                This is my HOME PAGE
-            </div>
-        </>
-    )
+const Accueil = () => {
+    return <h1>Home</h1>;
+};
 
-}
+export default Accueil;

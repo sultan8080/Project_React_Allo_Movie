@@ -6,11 +6,11 @@ import Mesfavoris from './pages/Mesfavoris';
 
 function App() {
   let component
-  switch (window.location) {
-    case "/":
+  switch (window.location.pathname) {
+    case '/':
       component = <Accueil />
       break;
-    case "/vosfavoris":
+    case '/Mesfavoris':
       component = <Mesfavoris />
       break;
     default:

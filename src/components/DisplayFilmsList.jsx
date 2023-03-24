@@ -12,7 +12,7 @@ function FilmsListDisplay({ film }) {
             <img
               className="card-img-top"
               src={imgPath + film.poster_path}
-              alt="Card image cap"
+              alt="Image de film pas trouvé"
             />
           </div>
           <div className="col-md-7">

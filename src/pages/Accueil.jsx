@@ -1,8 +1,8 @@
-import React from 'react';
-import FilmsList from '../components/FilmsList';
+import React from "react";
+import FilmsList from "../components/FilmsList";
 
 const Accueil = () => {
-    return <FilmsList />;
+  return <FilmsList />;
 };
 
 export default Accueil;

@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 
 import axios from "axios";
 import FilmsListDisplay from "./DisplayFilmsList";
+
 let api_url = "https://api.themoviedb.org/3/discover/movie?api_key=6cdd6b2df81d1e1f4b545b6fa1f4226d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
-let api_movie_URL = "https://api.themoviedb.org/3/search/movie?api_key=6cdd6b2df81d1e1f4b545b6fa1f4226d&language=en-US&page=1&include_adult=false&query=";
 
 
 const FilmsList = () => {
@@ -26,7 +26,7 @@ const FilmsList = () => {
 
   useEffect(() => {
     fetchFilms(api_url);
-  }, []);
+  }, [api_url]);
 
   const queryFilm = async (event) => {
     event.preventDefault();

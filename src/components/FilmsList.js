@@ -38,24 +38,24 @@ const FilmsList = () => {
   // console.log(films);
   return (
     <>
-      <div className="d-flex justify-content-center my-3">
-        <div className="col-sm-6 col-12">
-          <form onSubmit={queryFilm}>
-            <div className="d-flex">
-              <input type="search"
-                className="form-control"
-                placeholder="Entrer le nom de film" aria-label="search"
-                onChange={(e) => {
-                  setQuery(e.target.value);
-                }}
-                value={query}          ></input>
-              <button className="bg-warning" type="submit">
-                <i className="bi bi-search-heart "></i>
-              </button>
-            </div>
-          </form>
-        </div>
+      <div className="w-1/3 my-10 mx-auto">
+        <form onSubmit={queryFilm}>
+          <div className="flex h-10">
+            <input type="search"
+              className="w-1/2 p-3"
+              placeholder="Entrer le nom de film" aria-label="search"
+              onChange={(e) => {
+                setQuery(e.target.value);
+              }}
+              value={query}          ></input>
+            <button className="border-cyan-400 bg-cyan-700 hover:bg-cyan-400 w-1/3  " type="submit">
+              <i className="bi bi-search-heart" width="100" height="100"></i>
+              Chercher
+            </button>
+          </div>
+        </form>
       </div>
+
       <div className="row mt-5">
 
         {(films.length > 0) ? (

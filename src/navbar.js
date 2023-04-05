@@ -1,49 +1,34 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 
-
-
 export default function Navbar() {
-    return
+    return <nav className="dark:bg-gray-900 mx-20">
+        <div className="flex flex-wrap items-center justify-between p-4">
+            <Link to="/allo-movie">
+                <div className="flex items-center">
+                    <i class="bi bi-film" ></i>
+                    <span className="mr-3 rotate-90 text-cyan-400">
+                        <i class="bi bi-film" width="20" height="18" ></i>
+                    </span>
+                    <span className="self-center text-2xl font-semibold whitespace-nowrap text-cyan-400">
+                        ALLO-MOVIE</span>
+                </div>
+            </Link>
 
-
+            <ul className="flex p-4 text-cyan-500 gap-4 items-center ">
+                <CustomLink to="/"> ACCUEIL </CustomLink>
+                <CustomLink to="/Mesfavoris">MES FAVORIS </CustomLink>
+            </ul>
+        </div>
+    </nav>
 }
-
-
-
-
-
-
-
-
-
-// export default function Navbar() {
-//     return <nav className="navbar navbar-expand-lg navbar-light bg-warning">
-//         <div className="container-fluid">
-//             <Link className="navbar-brand" to="/">ALLO-MOVIE</Link>
-//             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-//                 <span className="navbar-toggler-icon"></span>
-//             </button>
-//             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-//                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-//                     <CustomLink to="/"> Accueil </CustomLink>
-//                     <CustomLink to="/Mesfavoris"> Mesfavoris </CustomLink>
-//                 </ul>
-//                 {/* <form className="d-flex">
-//                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-//                         <button className="btn btn-outline-success" type="submit">Search</button>
-//                 </form> */}
-//             </div>
-//         </div>
-//     </nav>
-// }
 
 function CustomLink({ to, children, ...props }) {
     const resolvedPath = useResolvedPath(to)
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
     return (
         <>
-            <li className="nav-item">
-                <Link className={isActive ? "active nav-link" : "nav-link"} to={to} {...props}> {children}</Link>
+            <li className=" hover:text-cyan-100">
+                <Link className={isActive ? "text-cyan-500" : ""} to={to} {...props}> {children}</Link>
             </li>
         </>
     )

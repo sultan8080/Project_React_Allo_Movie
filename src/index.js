@@ -4,6 +4,7 @@ import App from './App';
 // Bootstrap CSS
 
 import './index.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 

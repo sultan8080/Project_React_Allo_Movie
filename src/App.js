@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div className="">
         <Routes>
           <Route path="/" element={<Accueil />} />
           <Route path="/allo-movie" element={<Accueil />} />

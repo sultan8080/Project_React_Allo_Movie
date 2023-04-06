@@ -2,7 +2,7 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom"
 
 export default function Navbar() {
     return <nav className="dark:bg-gray-900 mx-20">
-        <div className="flex flex-wrap items-center justify-between p-4">
+        <div className="flex flex-wrap items-center justify-between p-3">
             <Link to="/allo-movie">
                 <div className="flex items-center">
                     <i class="bi bi-film" ></i>

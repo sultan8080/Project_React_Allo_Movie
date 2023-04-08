@@ -9,16 +9,17 @@ let api_url = "https://api.themoviedb.org/3/discover/movie?api_key=6cdd6b2df81d1
 
 const FilmsList = () => {
   const [films, setFilms] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [isErr, setIsErr] = useState(false);
+  const[primaryList, setPrimaryList] = useState([]);
+
   const [query, setQuery] = useState();
 
 
   const fetchFilms = async (x) => {
     try {
       const { data } = await axios.get(x);
+      setPrimaryList(data?.results);
       setFilms(data?.results);
-      setLoading(false);
+
     } catch (error) {
       setIsErr(true);
     }
@@ -26,12 +27,10 @@ const FilmsList = () => {
 
   useEffect(() => {
     fetchFilms(api_url);
-  }, [api_url]);
+  }, []);
 
   const queryFilm = async (event) => {
-    event.preventDefault();
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=6cdd6b2df81d1e1f4b545b6fa1f4226d&language=en-US&page=1&include_adult=false&query=${query}`;
-    fetchFilms(url);
+    
   }
 
 
@@ -70,3 +69,5 @@ const FilmsList = () => {
 };
 
 export default FilmsList;
+
+

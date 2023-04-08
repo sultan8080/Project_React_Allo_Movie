@@ -5,9 +5,9 @@ export default function Navbar() {
         <div className="flex flex-wrap items-center justify-between p-3">
             <Link to="/allo-movie">
                 <div className="flex items-center">
-                    <i class="bi bi-film" ></i>
+                    <i className="bi bi-film" ></i>
                     <span className="mr-3 rotate-90 text-cyan-400">
-                        <i class="bi bi-film" width="20" height="18" ></i>
+                        <i className="bi bi-film" width="20" height="18" ></i>
                     </span>
                     <span className="self-center text-2xl font-semibold whitespace-nowrap text-cyan-400">
                         ALLO-MOVIE</span>

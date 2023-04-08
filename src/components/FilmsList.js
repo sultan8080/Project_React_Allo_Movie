@@ -26,7 +26,7 @@ const FilmsList = () => {
     fetchFilms();
   }, []);
 
-  const handleQueary = (event) => {
+  const handleQuery = (event) => {
     const getQuery = event.target.value;
     if (getQuery.length > 0) {
       const searchdata = films.filter((film) => film.title.toLowerCase().includes(getQuery));
@@ -41,18 +41,16 @@ const FilmsList = () => {
   return (
     <>
       <div className="w-1/3 mt-5 mx-auto">
-
         <input type="search"
           className="w-full p-3"
           placeholder="Entrer le nom de film" aria-label="search"
           onChange={(e) =>
-            handleQueary(e)}
-          value={query}          ></input>
+            handleQuery(e)}
+          value={query}>
+        </input>
 
       </div>
-
       <div className="mt-8  gap-5 flex flex-wrap justify-center">
-
         {(films.length > 0) ? (
           films.map((films) =>
             <FilmsListDisplay key={films.id} film={films} />)

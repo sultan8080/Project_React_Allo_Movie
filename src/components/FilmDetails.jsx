@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import AddRemoveFavoriteButton from "./AddRemoveFavoriteButton";
+import AddRemoveFavoriteButton from "./UseFavoriteMovie";
 
 const imgPath = "https://image.tmdb.org/t/p/w500/";
 

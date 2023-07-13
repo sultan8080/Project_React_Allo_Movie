@@ -1,37 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import useFavoriteMovie from "./UseFavoriteMovie";
 
 const imgPath = "https://image.tmdb.org/t/p/w500/";
 
 function FilmsListDisplay({ film }) {
-  const [isFavorite, setIsFavorite] = useState(false);
-
-  useEffect(() => {
-    const storedFavorites =
-      JSON.parse(localStorage.getItem("favoriteMovies")) || [];
-    const isFilmFavorite = storedFavorites.some(
-      (favFilm) => favFilm.id === film.id
-    );
-    setIsFavorite(isFilmFavorite);
-  }, [film]);
-
-  const handleAddRemoveFavorite = () => {
-    const storedFavorites =   JSON.parse(localStorage.getItem("favoriteMovies")) || [];
-
-    if (isFavorite) {
-      // Remove movie from favorites
-      const updatedFavorites = storedFavorites.filter(
-        (favFilm) => favFilm.id !== film.id
-      );
-      localStorage.setItem("favoriteMovies", JSON.stringify(updatedFavorites));
-    } else {
-      // Add movie to favorites
-      const updatedFavorites = [...storedFavorites, film];
-      localStorage.setItem("favoriteMovies", JSON.stringify(updatedFavorites));
-    }
-
-    setIsFavorite((prevFavorite) => !prevFavorite);
-  };
+  const { isFavorite, handleAddRemoveFavorite } = useFavoriteMovie(film);
 
   return (
     <div className="w-96 flex flex-col border">

@@ -42,13 +42,13 @@ const FilmsList = () => {
         <input
           type="search"
           className="w-full p-3 rounded-lg"
-          placeholder="Enter the movie name"
+          placeholder="Entrez le nom du film"
           aria-label="search"
           onChange={handleQuery}
           value={query}
         />
       </div>
-      <div className="mt-8 gap-5 flex flex-wrap justify-center">
+      <div className="mt-10 gap-6 flex flex-wrap justify-center mx-20">
         {films.length > 0 ? (
           films.map((film) => <FilmsListDisplay key={film.id} film={film} />)
         ) : (

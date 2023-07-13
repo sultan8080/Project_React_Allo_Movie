@@ -15,27 +15,15 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <ul className="flex p-4 text-cyan-400 gap-4 items-center">
-          <li>
-            <NavLink
-              exact
-              to="/"
-              activeClassName="text-cyan-500"
-              className="hover:text-cyan-100"
-            >
-              ACCUEIL
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/Mesfavoris"
-              activeClassName="text-cyan-500"
-              className="hover:text-cyan-100"
-            >
-              MES FAVORIS
-            </NavLink>
-          </li>
-        </ul>
+        <div className="flex p-4 text-cyan-400 gap-4 items-center">
+          <NavLink exact to="/" className="hover:text-cyan-100">
+            ACCUEIL
+          </NavLink>
+
+          <NavLink to="/Mesfavoris" className="hover:text-cyan-100">
+            MES FAVORIS
+          </NavLink>
+        </div>
       </div>
     </nav>
   );

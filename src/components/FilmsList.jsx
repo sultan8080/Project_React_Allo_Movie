@@ -41,7 +41,7 @@ const FilmsList = () => {
       <div className="w-1/3 mt-5 mx-auto">
         <input
           type="search"
-          className="w-full p-3"
+          className="w-full p-3 rounded-lg"
           placeholder="Enter the movie name"
           aria-label="search"
           onChange={handleQuery}

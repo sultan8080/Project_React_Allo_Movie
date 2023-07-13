@@ -1,12 +1,13 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import AddRemoveFavoriteButton from "./UseFavoriteMovie";
+import useFavoriteMovie from "./UseFavoriteMovie";
 
 const imgPath = "https://image.tmdb.org/t/p/w500/";
 
 function FilmDetails() {
   const { state } = useLocation();
   const film = state?.film;
+  const { isFavorite, handleAddRemoveFavorite } = useFavoriteMovie(film);
 
   return film ? (
     <div className="md:mx-20 text-white p-4 md:mt-10">
@@ -36,7 +37,17 @@ function FilmDetails() {
             </p>
           </div>
 
-          <AddRemoveFavoriteButton film={film} />
+          <button
+            className={`mb-2 md:mb-0 text-white py-2 mt-4 shadow-sm rounded-full ${
+              isFavorite
+                ? "bg-red-800 hover:bg-red-900"
+                : "bg-cyan-700 hover:bg-cyan-800"
+            }`}
+            type="button"
+            onClick={handleAddRemoveFavorite}
+          >
+            {isFavorite ? "Retirer des favoris" : "Ajouter en favoris"}
+          </button>
         </div>
       </div>
     </div>

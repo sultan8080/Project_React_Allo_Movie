@@ -48,7 +48,7 @@ const FilmsList = () => {
           value={query}
         />
       </div>
-      <div className="mt-10 gap-6 flex flex-wrap justify-center mx-20">
+      <div className="mt-10 mx-4 flex flex-wrap justify-center gap-8">
         {films.length > 0 ? (
           films.map((film) => <FilmsListDisplay key={film.id} film={film} />)
         ) : (

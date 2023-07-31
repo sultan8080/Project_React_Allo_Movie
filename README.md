@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Projet Ecommerce : ALLO-MOVIE (REACT)
+Application à la Allociné.
+Il s’agit de créer une application web responsive de découverte et recherche de films, avec
+laquelle on pourra enregistrer des films en favoris
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Outils utilisée (Frontend):
+Tailwind-CSS, React, Yarn
 
-## Available Scripts
+## Caractéristique :
+Les films seront récupérés via l’API : themoviedb (
+https://www.themoviedb.org/?language=fr ). Api gratuite, qui nécessite de se
+créer un compte pour récupérer un token de connexion (JWT).
+Les favoris ne seront pas enregistrés via l’API, mais pourront être enregistrés dans
+le local Storage 
 
-In the project directory, you can run:
+## Besoin :
+Page d’accueil : films à découvrir
+1. On doit pouvoir voir de petite carte Film avec les informations
+principal des films, et deux boutons :
+2. Add / Remove : pour ajouter ou enlever le film des favoris
+- Details : pour rediriger vers la page de détails du film
+  Minimum 20
+- Optionnel : pagination pour afficher 20 films à la fois (les 20 premiers,
+puis 20 suivants, etc…)
+3. Page détails : permettant de voir les détails d’un film, avec également la
+gestion de favoris dans cette page.
+4. Page Favoris : permettant de voir la liste des films enregistrés en favoris
+5. Dans toutes les pages on doit avoir :
+6.  NavBar : permettant de naviguer vers l’accueil et les favoris
+7. Champs de recherche : permettant de rechercher des films via l’API
+themoviedb
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Home Page - Computer](./screenshots/HomePage_Computer.png)
+![Home Page - Laptop](./screenshots/HomePage_Laptop.png)
+![Home Page - iPad](./screenshots/HomePage_Screen_Ipad.png)
+![Home Page - Mobile](./screenshots/HomePage_Screen_Mobile.png)
+![Search Page](./screenshots/Chercher_Page.png)
+![Favorite Page](./screenshots/Film_Details.png)
+![Movie Details](./screenshots/Mes_Favoris_Page.png)

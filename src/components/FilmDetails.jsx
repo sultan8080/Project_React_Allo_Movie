@@ -10,7 +10,7 @@ function FilmDetails() {
   const { isFavorite, handleAddRemoveFavorite } = useFavoriteMovie(film);
 
   return film ? (
-    <div className="md:mx-20 text-white p-4 md:mt-10">
+    <div className="md:mx-28 text-white p-4 md:mt-10">
       <div className="md:flex">
         <div className="md:w-1/5">
           <img
@@ -38,7 +38,7 @@ function FilmDetails() {
           </div>
 
           <button
-            className={`mb-2 md:mb-0 text-white py-2 mt-4 shadow-sm rounded-full ${
+            className={`mb-2 md:mb-0 text-white py-2 px-20 mt-28 shadow-sm rounded-full ${
               isFavorite
                 ? "bg-red-800 hover:bg-red-900"
                 : "bg-cyan-700 hover:bg-cyan-800"
